@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Page with Nav</title>
+  <style>
+    /* Base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Navigation bar using Flexbox */
+    nav {
+      background-color: #333;
+      color: rgb(160, 23, 23);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: rgb(175, 148, 148);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #f0a500;
+    }
+
+    /* Content Section */
+    .container {
+      padding: 20px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .main {
+      flex: 2;
+      background-color: #ec1515;
+      padding: 1rem;
+    }
+
+    .sidebar {
+      flex: 1;
+      background-color: #e41010;
+      padding: 1rem;
+    }
+
+    /* Media Query for tablets and below */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
+
+      .container {
+        flex-direction: column;
+      }
+    }
+
+    /* Mobile phones */
+    @media (max-width: 480px) {
+      nav {
+        padding: 0.5rem;
+      }
+
+      nav .logo {
+        font-size: 1.2rem;
+      }
+
+      .main, .sidebar {
+        padding: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">PLP Server</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="main">
+      <h2>Main Content</h2>
+      <p>This section holds the main content. Resize the browser to see how it adjusts!</p>
+    </div>
+    <div class="sidebar">
+      <h3>Sidebar</h3>
+      <p>Sidebar content like links or ads goes here.</p>
+    </div>
+  </div>
+
+</body>
+</html>
